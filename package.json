@@ -2,10 +2,11 @@
   "name": "pokemon-gql",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "tsc": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "tsc": "tsc --noEmit",
+    "start": "npm run tsc && node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
+    "generate:gql": "graphql-codegen"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +20,14 @@
     "pokenode-ts": "^1.18.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.21.5",
+    "@graphql-codegen/cli": "^4.0.0",
+    "@graphql-codegen/client-preset": "^4.0.0",
     "@types/node": "^20.2.3",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   }
 }
