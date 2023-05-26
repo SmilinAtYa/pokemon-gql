@@ -15,6 +15,7 @@
   "dependencies": {
     "@apollo/datasource-rest": "^6.0.0",
     "@apollo/server": "^4.7.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.0",
     "axios": "^1.4.0",
     "axios-cache-interceptor": "^1.1.0",
     "graphql": "^16.6.0",
